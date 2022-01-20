@@ -4,7 +4,7 @@ You can use the [editor on GitHub](https://github.com/allyziemage/allyziemage.gi
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-<a href="/01-ghd3/index.html">Assignment 1</a>
+<a href="/01-ghd3/assignment1.html">Assignment 1</a>
 
 ### Markdown
 
