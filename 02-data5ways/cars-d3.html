@@ -16,7 +16,7 @@ This is a test
   var x, y, color;
 
   d3.csv("cars-sample.csv", d3.autoType, function(data){
-    buildScatter(d);
+    buildScatter(data);
   })
 
   function buildScatter(data) {
