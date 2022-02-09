@@ -21,14 +21,6 @@ var update
 
   function buildScatter(data) {
 
-      x = d3.scaleLinear()
-          .domain(d3.extent(data, d => d.Weight)).nice()
-          .range([margin.left, width - margin.right])
-
-      y = d3.scaleLinear()
-         .domain(d3.extent(data, d => d.MPG)).nice()
-         .range([height - margin.bottom, margin.top])
-
       color = d3.scaleOrdinal(data.map((d) => d.Manufacturer),
           d3.schemeCategory10
         )
