@@ -4,7 +4,7 @@
 </svg>
 
 <p>
-remove color
+just scatter
 </p>
 
 <script>
@@ -26,9 +26,6 @@ remove color
         .attr("viewBox", [0, 0, width, height])
         .property("value", []);
 
-      svg.append("g").call(xAxis);
-      svg.append("g").call(yAxis);
-
       // draw some dots!
 
       var dot = svg
@@ -41,34 +38,4 @@ remove color
         .attr("r", (data) => size(+d.Weight));
 
   }
-
-  const xAxis = (g) =>
-    g
-      .attr("transform", `translate(0,${height - margin.bottom})`)
-      .call(d3.axisBottom(x))
-      .call((g) =>
-          g
-          .append("text")
-          .attr("x", width - margin.right)
-          .attr("y", -4)
-          .attr("fill", "#000")
-          .attr("font-weight", "bold")
-          .attr("text-anchor", "end")
-          .text("Weight")
-        )
-
-
-  const yAxis = (g) =>
-      g
-      .attr("transform", `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y))
-      .call((g) =>
-                g
-                  .select(".tick:last-of-type text")
-                  .clone()
-                  .attr("x", 4)
-                  .attr("text-anchor", "start")
-                  .attr("font-weight", "bold")
-                  .text("MPG")
-              )
 </script>
