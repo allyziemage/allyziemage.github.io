@@ -4,7 +4,7 @@
 </svg>
 
 <p>
-map update
+var names
 </p>
 
 <script>
@@ -21,7 +21,7 @@ map update
 
   function buildScatter(data) {
 
-      color = d3.map((d) => d.Manufacturer)
+      color = d3.map((data) => d.Manufacturer)
 
       // make our blank svg canvas
       var svg = d3
@@ -38,10 +38,10 @@ map update
         .selectAll("circle")
         .data(data)
         .join("circle")
-        .attr("transform", (d) => `translate(${x(+d.Weight)},${y(+d.MPG)})`)
-        .attr("r", (d) => 10)
-        .attr("fill", (d) => color(d.Manufacturer))
-        .attr("r", (d) => size(+d.Weight));
+        .attr("transform", (data) => `translate(${x(+d.Weight)},${y(+d.MPG)})`)
+        .attr("r", (data) => 10)
+        .attr("fill", (data) => color(d.Manufacturer))
+        .attr("r", (data) => size(+d.Weight));
 
   }
 
